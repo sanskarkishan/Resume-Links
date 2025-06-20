@@ -3,7 +3,7 @@ import react from "./assets/certificates/react.jpg";
 import tata from "./assets/certificates/tata.jpg";
 import lor from "./assets/certificates/lor.png";
 import face from "./assets/certificates/Face.jpg";
-import git from "./assets/certificates/Git.jpg";
+import git from "./assets/certificates/GIt.jpg";
 export const Certification = () => {
   return (
     <>

@@ -5,7 +5,7 @@ import COB from "./assets/internships/COB.jpg";
 export const Internships = () => {
   return (
     <>
-      <div className="text-center m-auto text-2xl bg-blue-500 w-screen lg:h-screen h-100% ">
+      <div className="text-center text-2xl bg-blue-500 w-screen lg:min-h-screen min-h-screen ">
         <div>
           <h1 className="text-3xl font-bold text-white pt-10 lg:text-4xl ">
             Internships Certificates
@@ -15,32 +15,36 @@ export const Internships = () => {
         <div className="flex items-stretch justify-center gap-5 flex-wrap max-sm:px-5 pb-20 ">
           <div>
             <img
-              className="w-96 h-96 rounded-lg shadow-lg mt-10"
+              className=" lg:w-90 lg:h-110 rounded-lg shadow-lg mt-5"
               src={AIML}
               alt="Internship Certificate 1"
             />
-            <p className="text-white text-xl font-semibold mt-2">
+            <p className="text-white text-center text-xl font-semibold mt-2">
               Internship at Edunet Foundation
             </p>
           </div>
+        </div>
+
+        <div className="flex items-stretch justify-center gap-5 flex-wrap max-sm:px-5 pb-20">
           <div>
             <img
-              className="w-96 h-96 rounded-lg shadow-lg mt-10"
+              className="lg:w-120 lg:h-80 rounded-lg shadow-lg tect-c
+              "
               src={BH}
               alt="Internship Certificate 1"
             />
             <p className="text-white text-xl font-semibold mt-2">
-              Internship at Bharat Intern{" "}
+              Internship at Bharat Intern
             </p>
           </div>
           <div>
             <img
-              className="w-96 h-96 rounded-lg shadow-lg mt-10"
+              className="lg:w-120 lg:h-80 rounded-lg shadow-lg"
               src={COB}
               alt="Internship Certificate 1"
             />
             <p className="text-white text-xl font-semibold mt-2">
-              Internship at CodesOnBytes{" "}
+              Internship at CodesOnBytes
             </p>
           </div>
         </div>

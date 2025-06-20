@@ -2,6 +2,8 @@ import java from "./assets/certificates/java.jpg";
 import react from "./assets/certificates/react.jpg";
 import tata from "./assets/certificates/tata.jpg";
 import lor from "./assets/certificates/lor.png";
+import face from "./assets/certificates/Face.jpg";
+import git from "./assets/certificates/Git.jpg";
 export const Certification = () => {
   return (
     <>
@@ -13,7 +15,28 @@ export const Certification = () => {
         </div>
 
         <div className="flex items-stretch justify-center gap-5 flex-wrap max-sm:px-5 pb-20 ">
-          <div>
+
+          <div className="w-96 h-96 flex flex-col items-center">
+            <img
+              className="w-96 h-96 rounded-lg shadow-lg mt-10"
+              src={git}
+              alt="Internship Certificate 1"
+            />
+            <p className="text-white text-xl font-semibold mt-2">
+              Udemy Mastering Git Certification
+            </p>
+          </div>
+          <div className="w-96 h-96 flex flex-col items-center">
+            <img
+              className="w-96 h-96 rounded-lg shadow-lg mt-10"
+              src={face}
+              alt="Internship Certificate 1"
+            />
+            <p className="text-white text-xl font-semibold mt-2">
+              Udemy Face Recognition Certification
+            </p>
+          </div> 
+          <div className="w-96 h-96 flex flex-col items-center">
             <img
               className="w-96 h-96 rounded-lg shadow-lg mt-10"
               src={java}
@@ -23,7 +46,7 @@ export const Certification = () => {
               Udemy Java Certification
             </p>
           </div>
-          <div>
+          <div className="w-96 h-96 flex flex-col items-center">
             <img
               className="w-96 h-96 rounded-lg shadow-lg mt-10"
               src={react}
@@ -33,9 +56,13 @@ export const Certification = () => {
               Udemy React Certification{" "}
             </p>
           </div>
+        </div>
+
+        
+        <div className="flex items-stretch justify-center gap-5 flex-wrap max-sm:px-5 pb-20 ">
           <div>
             <img
-              className="w-96 h-96 rounded-lg shadow-lg mt-10"
+              className="w-110 h-150 rounded-lg shadow-lg mt-10"
               src={tata}
               alt="Internship Certificate 1"
             />
@@ -45,7 +72,7 @@ export const Certification = () => {
           </div>
           <div>
             <img
-              className="w-96 h-96 rounded-lg shadow-lg mt-10"
+              className="w-110 h-150 rounded-lg shadow-lg mt-10"
               src={lor}
               alt="Internship Certificate 1"
             />

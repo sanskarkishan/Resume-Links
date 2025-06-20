@@ -17,7 +17,7 @@ export const Hackathons = () => {
         <div className="flex items-stretch justify-center gap-5 flex-wrap max-sm:px-5 pb-20 ">
           <div>
             <img
-              className="w-110 h-80 rounded-lg shadow-lg mt-10"
+              className="w-110 h-70 rounded-lg shadow-lg mt-10"
               src={Eurogrip}
               alt="Internship Certificate 1"
             />
@@ -27,7 +27,7 @@ export const Hackathons = () => {
           </div>
           <div>
             <img
-              className="w-110 h-80 rounded-lg shadow-lg mt-10"
+              className="w-110 h-70 rounded-lg shadow-lg mt-10"
               src={isro}
               alt="Internship Certificate 1"
             />
@@ -37,7 +37,7 @@ export const Hackathons = () => {
           </div>
           <div>
             <img
-              className="w-110 h-80 rounded-lg shadow-lg mt-10"
+              className="w-110 h-70 rounded-lg shadow-lg mt-10"
               src={Nestle}
               alt="Internship Certificate 1"
             />
@@ -47,7 +47,7 @@ export const Hackathons = () => {
           </div>
           <div>
             <img
-              className="w-110 h-80 rounded-lg shadow-lg mt-10"
+              className="w-110 h-70 rounded-lg shadow-lg mt-10"
               src={ucet}
               alt="Internship Certificate 1"
             />
@@ -57,7 +57,7 @@ export const Hackathons = () => {
           </div>
           <div>
             <img
-              className="w-110 h-80 rounded-lg shadow-lg mt-10"
+              className="w-110 h-70 rounded-lg shadow-lg mt-10"
               src={Zuno}
               alt="Internship Certificate 1"
             />

@@ -3,67 +3,49 @@ import BH from "./assets/internships/BH.jpg";
 import COB from "./assets/internships/COB.jpg";
 
 export const Internships = () => {
+
   return (
-    <>
-      <div className="text-center text-2xl bg-blue-500 w-screen lg:min-h-screen min-h-screen ">
-        <div>
-          <h1 className="text-3xl font-bold text-white pt-10 lg:text-4xl ">
-            Internships Certificates
-          </h1>
-        </div>
+    <div className="font-[Inter] bg-gradient-to-r from-sky-500 to-indigo-600 min-h-screen w-full text-white">
+      <header className="pt-12 text-center">
+        <h1 className="text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-md">
+          Internship Certificates
+        </h1>
+        <p className="text-lg mt-2 text-blue-100">
+          Proof of dedication and growth 🌱
+        </p>
+      </header>
 
-        <div className="flex items-stretch justify-center gap-5 flex-wrap max-sm:px-5 pb-20 ">
-          <div>
+      <section className="flex flex-wrap justify-center gap-10 px-6 mt-10 pb-40">
+        {[
+          {
+            src: AIML,
+            alt: "Internship at Edunet Foundation",
+            label: "Internship at Edunet Foundation",
+          },
+          {
+            src: BH,
+            alt: "Internship at Bharat Intern",
+            label: "Internship at Bharat Intern",
+          },
+          {
+            src: COB,
+            alt: "Internship at CodesOnBytes",
+            label: "Internship at CodesOnBytes",
+          },
+        ].map(({ src, alt, label }, idx) => (
+          <div
+            key={idx}
+            className="bg-white/10 backdrop-blur-lg border border-white/30 rounded-xl shadow-xl p-4 max-w-sm"
+          >
             <img
-              className=" lg:w-90 lg:h-110 rounded-lg shadow-lg mt-5"
-              src={AIML}
-              alt="Internship Certificate 1"
+              className="rounded-lg object-contain w-full h-64 md:h-80"
+              src={src}
+              alt={alt}
             />
-            <p className="text-white text-center text-xl font-semibold mt-2">
-              Internship at Edunet Foundation
-            </p>
+            <p className="mt-3 text-center font-semibold text-lg">{label}</p>
           </div>
-        </div>
-
-        <div className="flex items-stretch justify-center gap-5 flex-wrap max-sm:px-5 pb-20">
-          <div>
-            <img
-              className="lg:w-120 lg:h-80 rounded-lg shadow-lg tect-c
-              "
-              src={BH}
-              alt="Internship Certificate 1"
-            />
-            <p className="text-white text-xl font-semibold mt-2">
-              Internship at Bharat Intern
-            </p>
-          </div>
-          <div>
-            <img
-              className="lg:w-120 lg:h-80 rounded-lg shadow-lg"
-              src={COB}
-              alt="Internship Certificate 1"
-            />
-            <p className="text-white text-xl font-semibold mt-2">
-              Internship at CodesOnBytes
-            </p>
-          </div>
-        </div>
-
-        <footer
-          className="w-auto h-15 bg-gray-700 text-white flex justify-between 
-          items-center px-5 py-2 fixed bottom-0 left-0 right-0"
-        >
-          <div className="m-auto">
-            <p className="text-sm">
-              &copy; {new Date().getFullYear()} All rights reserved.
-            </p>
-            <p className="text-sm">
-              Designed and Developed by{" "}
-              <span className="font-bold">Sanskar Kishan</span>
-            </p>
-          </div>
-        </footer>
-      </div>
-    </>
+        ))}
+      </section>
+    </div>
   );
 };

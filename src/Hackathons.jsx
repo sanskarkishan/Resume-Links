@@ -4,6 +4,7 @@ import Nestle from "./assets/hackathons/Nestle.png";
 import ucet from "./assets/hackathons/ucet.jpg";
 import Zuno from "./assets/hackathons/Zuno.jpg";
 import HPCL from "./assets/hackathons/HPCL.jpg";
+import SDF from "./assets/hackathons/SDF.png";
 
 export const Hackathons = () => {
 
@@ -26,6 +27,7 @@ export const Hackathons = () => {
           { src: ucet, label: "UCET Workshop Certificate" },
           { src: Zuno, label: "Zuno Appreciation Certificate" },
           { src: HPCL, label: "HPCL Hackathon Certificate" },
+          { src: SDF, label: "Sarvagya Doers Foundation Certificate" },
         ].map(({ src, label }, idx) => (
           <div
             key={idx}

@@ -1,6 +1,7 @@
 import AIML from "./assets/internships/AIML.jpg";
 import BH from "./assets/internships/BH.jpg";
 import COB from "./assets/internships/COB.jpg";
+import SDF from "./assets/internships/SDF.png";
 
 export const Internships = () => {
 
@@ -31,6 +32,11 @@ export const Internships = () => {
             src: COB,
             alt: "Internship at CodesOnBytes",
             label: "Internship at CodesOnBytes",
+          },
+          {
+            src: SDF,
+            alt: "Internship at Sarvagya Doers Foundation",
+            label: "Internship at Sarvagya Doers Foundation",
           },
         ].map(({ src, alt, label }, idx) => (
           <div

@@ -17,10 +17,10 @@ export const Links = () => {
             href: "https://www.linkedin.com/in/sanskar-kishan-bb5910220/",
           },
           { name: "Projects", href: "https://github.com/sanskarkishan" },
-          {
-            name: "Resume",
-            href: "https://drive.google.com/drive/u/0/folders/10aQhlimCCvtC3CfOxRdeiOUqD9nLzwRG",
-          },
+          // {
+          //   name: "Resume",
+          //   href: "https://drive.google.com/drive/u/0/folders/10aQhlimCCvtC3CfOxRdeiOUqD9nLzwRG",
+          // },
         ].map(({ name, href }) => (
           <li
             key={name}
@@ -33,6 +33,7 @@ export const Links = () => {
         ))}
 
         {[
+          { name: "Resume", path: "/resume" },
           { name: "Internships", path: "/Internships" },
           { name: "Certification", path: "/Certification" },
           { name: "Hackathons", path: "/Hackathons" },

@@ -1,13 +1,13 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import d1 from "./assets/diploma/Diploma 1st.jpg";
-import d2 from "./assets/diploma/Diploma 2nd.jpg";
-import d3 from "./assets/diploma/Diploma 3rd.jpg";
-import d4 from "./assets/diploma/Diploma 4th.jpg";
-import d5 from "./assets/diploma/Diploma 5th.jpg";
-import d6 from "./assets/diploma/Diploma 6th.jpg";
-import provisional from "./assets/diploma/Diploma Provisional.jpg";
-import degree from "./assets/diploma/Diploma Degree.jpg";
+import d1 from "./assets/Diploma/Diploma 1st.jpg";
+import d2 from "./assets/Diploma/Diploma 2nd.jpg";
+import d3 from "./assets/Diploma/Diploma 3rd.jpg";
+import d4 from "./assets/Diploma/Diploma 4th.jpg";
+import d5 from "./assets/Diploma/Diploma 5th.jpg";
+import d6 from "./assets/Diploma/Diploma 6th.jpg";
+import provisional from "./assets/Diploma/Diploma Provisional.jpg";
+import degree from "./assets/Diploma/Diploma Degree.jpg";
 
 const docs = [
   { src: d1, label: "Diploma 1st" },

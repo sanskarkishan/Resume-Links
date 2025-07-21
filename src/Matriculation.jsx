@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import admitCard from "./assets/matric/X Admit card.jpg";
-import passingCert from "./assets/matric/X Passing Cert.jpg";
-import marksheet from "./assets/matric/X Marksheet.jpg";
+import admitCard from "./assets/Matric/X Admit card.jpg";
+import passingCert from "./assets/Matric/X Passing Cert.jpg";
+import marksheet from "./assets/Matric/X Marksheet.jpg";
 
 const docs = [
   { src: admitCard, label: "X Admit Card" },

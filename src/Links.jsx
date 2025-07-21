@@ -37,6 +37,7 @@ export const Links = () => {
           { name: "Internships", path: "/Internships" },
           { name: "Certification", path: "/Certification" },
           { name: "Hackathons", path: "/Hackathons" },
+          { name: "Personal", path: "/personal" }, // Added Personal button
         ].map(({ name, path }) => (
           <li
             key={name}

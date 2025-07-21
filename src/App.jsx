@@ -10,6 +10,25 @@ import { Internships } from "./Internships";
 import { Certification } from "./Certification";
 import { Hackathons } from "./Hackathons";
 import { OnlineResume } from "./OnlineResume";
+import { Personal } from "./Personal";
+import { PersonalDocuments } from "./PersonalDocuments";
+import { Matriculation } from "./Matriculation";
+import { Diploma } from "./Diploma";
+import { Btech } from "./Btech";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+// ProtectedRoute component
+function ProtectedRoute({ children }) {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    if (!isLoggedIn) {
+      navigate("/personal", { replace: true });
+    }
+  }, [navigate]);
+  return children;
+}
 
 // App component (uses useLocation inside the Router context)
 function App() {
@@ -23,6 +42,11 @@ function App() {
         <Route path="/Internships" element={<Internships />} />
         <Route path="/Certification" element={<Certification />} />
         <Route path="/Hackathons" element={<Hackathons />} />
+        <Route path="/personal" element={<Personal />} />
+        <Route path="/personal-documents" element={<ProtectedRoute><PersonalDocuments /></ProtectedRoute>} />
+        <Route path="/matriculation" element={<ProtectedRoute><Matriculation /></ProtectedRoute>} />
+        <Route path="/diploma" element={<ProtectedRoute><Diploma /></ProtectedRoute>} />
+        <Route path="/btech" element={<ProtectedRoute><Btech /></ProtectedRoute>} />
       </Routes>
 
       {/* Conditionally show footer except on /resume route */}

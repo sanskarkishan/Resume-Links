@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import b3 from "./assets/btech/BTech 3rd.jpg";
-import b4 from "./assets/btech/BTech 4th.jpg";
-import b5 from "./assets/btech/BTech 5th.jpg";
+import b3 from "./assets/BTech/BTech 3rd.jpg";
+import b4 from "./assets/BTech/BTech 4th.jpg";
+import b5 from "./assets/BTech/BTech 5th.jpg";
 
 const docs = [
   { src: b3, label: "BTech 3rd" },

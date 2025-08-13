@@ -5,6 +5,7 @@ import ucet from "./assets/hackathons/ucet.jpg";
 import Zuno from "./assets/hackathons/Zuno.jpg";
 import HPCL from "./assets/hackathons/HPCL.jpg";
 import SDF from "./assets/hackathons/SDF.png";
+import CFB from "./assets/hackathons/CFB.png";
 
 export const Hackathons = () => {
 
@@ -21,6 +22,7 @@ export const Hackathons = () => {
 
       <section className="flex flex-wrap justify-center gap-10 px-6 mt-10 pb-28">
         {[
+          { src: CFB, label: "Code For Bharat Certificate" },
           { src: Eurogrip, label: "Eurogrip Hackathon Certificate" },
           { src: isro, label: "ISRO Workshop Certificate" },
           { src: Nestle, label: "Nestle Workshop Certificate" },

@@ -1,9 +1,10 @@
-import java from "./assets/certificates/java.jpg";
+import java1 from "./assets/certificates/java1.jpg";
 import react from "./assets/certificates/react.jpg";
 import tata from "./assets/certificates/tata.jpg";
 import lor from "./assets/certificates/lor.png";
 import face from "./assets/certificates/Face.jpg";
 import git from "./assets/certificates/GIt.jpg";
+import java2 from "./assets/certificates/java2.jpg";
 
 export const Certification = () => {
 
@@ -20,9 +21,10 @@ export const Certification = () => {
 
       <section className="flex flex-wrap justify-center gap-10 px-6 mt-10 pb-24">
         {[
+          { src: java2, label: "Udemy Core Java Certification" },
           { src: git, label: "Udemy Mastering Git Certification" },
           { src: face, label: "Udemy Face Recognition Certification" },
-          { src: java, label: "Udemy Java Certification" },
+          { src: java1, label: "Udemy Java Certification" },
           { src: react, label: "Udemy React Certification" },
           { src: tata, label: "NATS TATA MOTORS Certification" },
           { src: lor, label: "LOR from SARVAGYA DOERS FOUNDATION" },

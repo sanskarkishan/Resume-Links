@@ -5,6 +5,7 @@ import lor from "./assets/certificates/lor.png";
 import face from "./assets/certificates/Face.jpg";
 import git from "./assets/certificates/GIt.jpg";
 import java2 from "./assets/certificates/java2.jpg";
+import sql1 from "./assets/certificates/sql1.jpg"
 
 export const Certification = () => {
 
@@ -21,6 +22,7 @@ export const Certification = () => {
 
       <section className="flex flex-wrap justify-center gap-10 px-6 mt-10 pb-24">
         {[
+          { src: sql1, label: "Udemy SQL Certification" },
           { src: java2, label: "Udemy Core Java Certification" },
           { src: git, label: "Udemy Mastering Git Certification" },
           { src: face, label: "Udemy Face Recognition Certification" },

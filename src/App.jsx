@@ -5,16 +5,16 @@ import {
   useLocation,
 } from "react-router-dom";
 import "./App.css";
-import { Links } from "./Links";
-import { Internships } from "./Internships";
-import { Certification } from "./Certification";
-import { Hackathons } from "./Hackathons";
-import { OnlineResume } from "./OnlineResume";
-import { Personal } from "./Personal";
-import { PersonalDocuments } from "./PersonalDocuments";
-import { Matriculation } from "./Matriculation";
-import { Diploma } from "./Diploma";
-import { Btech } from "./Btech";
+import { Links } from "./pages/Links";
+import { Internships } from "./pages/certificates/Internships";
+import { Certification } from "./pages/certificates/Certification";
+import { Hackathons } from "./pages/certificates/Hackathons";
+import { OnlineResume } from "./pages/OnlineResume";
+import { Personal } from "./pages/Personal";
+import { PersonalDocuments } from "./pages/PersonalDocuments";
+import { Matriculation } from "./pages/documents/Matriculation";
+import { Diploma } from "./pages/documents/Diploma";
+import { Btech } from "./pages/documents/Btech";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 

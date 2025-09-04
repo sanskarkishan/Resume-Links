@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import html2pdf from "html2pdf.js";
-import qr from "./assets/resume/qr.png";
+import qr from "../assets/resume/qr.png";
 
 export const OnlineResume = () => {
   const resumeRef = useRef();

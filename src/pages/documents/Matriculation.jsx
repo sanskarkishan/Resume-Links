@@ -1,16 +1,16 @@
 import React, { useState, useRef } from "react";
-import java1 from "./assets/certificates/java1.jpg";
-import react from "./assets/certificates/react.jpg";
-import tata from "./assets/certificates/tata.jpg";
-import lor from "./assets/certificates/lor.png";
-import face from "./assets/certificates/Face.jpg";
-import git from "./assets/certificates/GIt.jpg";
-import java2 from "./assets/certificates/java2.jpg";
-import sql1 from "./assets/certificates/sql1.jpg"
-import react1 from "./assets/certificates/react1.jpg"
-import react2 from "./assets/certificates/react2.jpg"
+import { useNavigate } from "react-router-dom";
+import admitCard from "../../assets/Matric/X Admit card.jpg";
+import passingCert from "../../assets/Matric/X Passing Cert.jpg";
+import marksheet from "../../assets/Matric/X Marksheet.jpg";
 
-export const Certification = () => {
+const docs = [
+  { src: admitCard, label: "X Admit Card" },
+  { src: passingCert, label: "X Passing Certificate" },
+  { src: marksheet, label: "X Marksheet" },
+];
+
+export const Matriculation = () => {
   const [modalImg, setModalImg] = useState(null);
   const [zoom, setZoom] = useState(1);
   const [dragging, setDragging] = useState(false);
@@ -18,6 +18,7 @@ export const Certification = () => {
   const startYRef = useRef(0);
   const lastOffsetYRef = useRef(0);
   const printRef = useRef();
+  const navigate = useNavigate();
 
   const handleOpenModal = (img) => {
     setModalImg(img);
@@ -57,38 +58,57 @@ export const Certification = () => {
 
   React.useEffect(() => {
     if (dragging) {
-      document.addEventListener('mousemove', handleMouseMove);
-      document.addEventListener('mouseup', handleMouseUp);
-      return () => {
-        document.removeEventListener('mousemove', handleMouseMove);
-        document.removeEventListener('mouseup', handleMouseUp);
-      };
+      window.addEventListener("mousemove", handleMouseMove);
+      window.addEventListener("mouseup", handleMouseUp);
+    } else {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
     }
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
+    };
   }, [dragging, offsetY]);
 
+  React.useEffect(() => {
+    setOffsetY(0);
+    lastOffsetYRef.current = 0;
+  }, [modalImg]);
+
+  // Print logic: print only the modal image, stretch horizontally to fill A4
   const handlePrint = () => {
     if (!modalImg) return;
     const printWindow = window.open('', '_blank');
-    printWindow.document.write(`
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>Print - ${modalImg.label}</title>
-          <style>
-            body { margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; background: white; }
-            .a4-img-container { max-width: 100%; max-height: 100%; }
-            img { max-width: 100%; max-height: 100%; object-fit: contain; }
-            @media print {
-              body { margin: 0; padding: 0; }
-              .a4-img-container { width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; }
-            }
-          </style>
-        </head>
-        <body>
-          <div class="a4-img-container"></div>
-        </body>
-      </html>
-    `);
+    printWindow.document.write(`<!DOCTYPE html><html><head><title>Print</title><style>
+      @media print {
+        @page { size: A4 portrait; margin: 0; }
+        html, body { margin: 0; padding: 0; background: white; height: 100%; width: 100%; }
+        .a4-img-container {
+          width: 210mm; height: 297mm;
+          overflow: hidden;
+        }
+        .a4-img-container img {
+          width: 210mm; height: 297mm;
+          object-fit: fill;
+          display: block;
+          margin: 0;
+          box-shadow: none;
+        }
+      }
+      html, body { height: 100%; width: 100%; margin: 0; padding: 0; background: white; }
+      .a4-img-container {
+        width: 210mm; height: 297mm;
+        overflow: hidden;
+        background: white;
+      }
+      .a4-img-container img {
+        width: 210mm; height: 297mm;
+        object-fit: fill;
+        display: block;
+        margin: 0;
+        box-shadow: none;
+      }
+    </style></head><body><div class='a4-img-container'></div></body></html>`);
     printWindow.document.close();
     const img = printWindow.document.createElement('img');
     img.src = modalImg.src;
@@ -102,44 +122,30 @@ export const Certification = () => {
   };
 
   return (
-    <div className="font-[Inter] bg-gradient-to-br from-cyan-600 to-blue-800 min-h-screen w-full text-white">
-      <header className="pt-12 text-center">
-        <h1 className="text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-md">
-          Certificates
-        </h1>
-        <p className="text-lg mt-2 text-cyan-100">
-          Udemy, NATS, and more—your learning journey on display 🎓
-        </p>
-      </header>
-
-      <section className="flex flex-wrap justify-center gap-10 px-6 mt-10 pb-24">
-        {[
-          { src: react1, label: "Udemy React Certification" },
-          { src: react2, label: "Udemy React Certification" },
-          { src: sql1, label: "Udemy SQL Certification" },
-          { src: java2, label: "Udemy Core Java Certification" },
-          { src: git, label: "Udemy Mastering Git Certification" },
-          { src: face, label: "Udemy Face Recognition Certification" },
-          { src: java1, label: "Udemy Java Certification" },
-          { src: react, label: "Udemy React Certification" },
-          { src: tata, label: "NATS TATA MOTORS Certification" },
-          { src: lor, label: "LOR from SARVAGYA DOERS FOUNDATION" },
-        ].map(({ src, label }, idx) => (
-          <div
-            key={idx}
-            className="bg-white/10 backdrop-blur-lg border border-white/30 rounded-xl shadow-xl p-4 max-w-sm"
-          >
+    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-slate-800 px-2 sm:px-0 pb-32">
+      {/* Back button */}
+      <button
+        className="fixed top-4 left-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-3 sm:px-5 py-1.5 sm:py-2 rounded-lg shadow-md transition-all z-40 text-sm sm:text-base flex items-center gap-1"
+        onClick={() => navigate('/personal-documents')}
+        aria-label="Back"
+      >
+        <span>&#8592;</span>
+        <span className="hidden sm:inline-block">Back</span>
+      </button>
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide text-indigo-400 text-center drop-shadow-lg mb-8 mt-8">Matriculation</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl justify-items-center">
+        {docs.map(({ src, label }) => (
+          <div key={label} className="flex flex-col items-center">
             <img
-              className="rounded-lg object-contain w-full h-64 md:h-80 cursor-pointer hover:scale-105 transition-transform"
               src={src}
               alt={label}
+              className="rounded-xl shadow-lg w-full max-w-xs object-cover cursor-pointer hover:scale-105 transition-transform"
               onClick={() => handleOpenModal({ src, label })}
             />
-            <p className="mt-3 text-center font-semibold text-lg">{label}</p>
+            <span className="mt-3 text-lg font-semibold text-indigo-200 text-center drop-shadow">{label}</span>
           </div>
         ))}
-      </section>
-      
+      </div>
       {modalImg && (
         <div
           className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
@@ -176,11 +182,11 @@ export const Certification = () => {
               draggable={false}
               onMouseDown={handleMouseDown}
             />
-            <span className="mt-2 text-2xl font-bold text-cyan-200 text-center drop-shadow-lg">{modalImg.label}</span>
-            <span className="mt-1 text-sm text-cyan-100">Scroll to zoom ({Math.round(zoom * 100)}%) | Drag to move</span>
+            <span className="mt-2 text-2xl font-bold text-indigo-200 text-center drop-shadow-lg">{modalImg.label}</span>
+            <span className="mt-1 text-sm text-indigo-100">Scroll to zoom ({Math.round(zoom * 100)}%) | Drag to move</span>
           </div>
         </div>
       )}
     </div>
   );
-};
+}; 

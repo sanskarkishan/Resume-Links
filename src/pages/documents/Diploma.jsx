@@ -1,16 +1,26 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import b3 from "./assets/BTech/BTech 3rd.jpg";
-import b4 from "./assets/BTech/BTech 4th.jpg";
-import b5 from "./assets/BTech/BTech 5th.jpg";
+import d1 from "../../assets/Diploma/Diploma 1st.jpg";
+import d2 from "../../assets/Diploma/Diploma 2nd.jpg";
+import d3 from "../../assets/Diploma/Diploma 3rd.jpg";
+import d4 from "../../assets/Diploma/Diploma 4th.jpg";
+import d5 from "../../assets/Diploma/Diploma 5th.jpg";
+import d6 from "../../assets/Diploma/Diploma 6th.jpg";
+import provisional from "../../assets/Diploma/Diploma Provisional.jpg";
+import degree from "../../assets/Diploma/Diploma Degree.jpg";
 
 const docs = [
-  { src: b3, label: "BTech 3rd" },
-  { src: b4, label: "BTech 4th" },
-  { src: b5, label: "BTech 5th" },
+  { src: d1, label: "Diploma 1st" },
+  { src: d2, label: "Diploma 2nd" },
+  { src: d3, label: "Diploma 3rd" },
+  { src: d4, label: "Diploma 4th" },
+  { src: d5, label: "Diploma 5th" },
+  { src: d6, label: "Diploma 6th" },
+  { src: provisional, label: "Diploma Provisional" },
+  { src: degree, label: "Diploma Degree" },
 ];
 
-export const Btech = () => {
+export const Diploma = () => {
   const [modalImg, setModalImg] = useState(null);
   const [zoom, setZoom] = useState(1);
   const [dragging, setDragging] = useState(false);
@@ -122,7 +132,7 @@ export const Btech = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-slate-800 px-2 sm:px-0 pb-32">
+    <div className="min-h-screen w-full flex mb-18 flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-slate-800 px-2 sm:px-0">
       {/* Back button */}
       <button
         className="fixed top-4 left-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-3 sm:px-5 py-1.5 sm:py-2 rounded-lg shadow-md transition-all z-40 text-sm sm:text-base flex items-center gap-1"
@@ -132,8 +142,8 @@ export const Btech = () => {
         <span>&#8592;</span>
         <span className="hidden sm:inline-block">Back</span>
       </button>
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide text-indigo-400 text-center drop-shadow-lg mt-5 mb-8">BTech</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl justify-items-center">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide text-indigo-400 text-center drop-shadow-lg mt-5 mb-8">Diploma</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl justify-items-center pb-6">
         {docs.map(({ src, label }) => (
           <div key={label} className="flex flex-col items-center">
             <img

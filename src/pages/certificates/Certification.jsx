@@ -9,6 +9,7 @@ import java2 from "../../assets/certificates/java2.jpg";
 import sql1 from "../../assets/certificates/sql1.jpg"
 import react1 from "../../assets/certificates/react1.jpg"
 import react2 from "../../assets/certificates/react2.jpg"
+import infosys1 from "../../assets/certificates/Infosys SQL1.jpg"
 
 export const Certification = () => {
   const [modalImg, setModalImg] = useState(null);
@@ -114,6 +115,7 @@ export const Certification = () => {
 
       <section className="flex flex-wrap justify-center gap-10 px-6 mt-10 pb-24">
         {[
+          { src: infosys1, label: "Infosys SQL Developer Certification" },
           { src: react1, label: "Udemy React Certification" },
           { src: react2, label: "Udemy React Certification" },
           { src: sql1, label: "Udemy SQL Certification" },

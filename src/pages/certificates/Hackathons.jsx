@@ -1,12 +1,13 @@
 import React, { useState, useRef } from "react";
 import Eurogrip from "../../assets/hackathons/Eurogrip.jpg";
 import isro from "../../assets/hackathons/isro.jpg";
-import Nestle from "../../assets/hackathons/Nestle.png";
+import Nestle1 from "../../assets/hackathons/Nestle.png";
 import ucet from "../../assets/hackathons/ucet.jpg";
 import Zuno from "../../assets/hackathons/Zuno.jpg";
 import HPCL from "../../assets/hackathons/HPCL.jpg";
 import SDF from "../../assets/hackathons/SDF.png";
 import CFB from "../../assets/hackathons/CFB.png";
+import Nestle2 from "../../assets/hackathons/Nestle2.jpg";
 
 export const Hackathons = () => {
   const [modalImg, setModalImg] = useState(null);
@@ -112,10 +113,11 @@ export const Hackathons = () => {
 
       <section className="flex flex-wrap justify-center gap-10 px-6 mt-10 pb-28">
         {[
+          { src: Nestle2, label: "Nestle Resilience E-learning Certificate" },
           { src: CFB, label: "Code For Bharat Certificate" },
           { src: Eurogrip, label: "Eurogrip Hackathon Certificate" },
           { src: isro, label: "ISRO Workshop Certificate" },
-          { src: Nestle, label: "Nestle Workshop Certificate" },
+          { src: Nestle1, label: "Nestle Sustainability E-learning Certificate" },
           { src: ucet, label: "UCET Workshop Certificate" },
           { src: Zuno, label: "Zuno Appreciation Certificate" },
           { src: HPCL, label: "HPCL Hackathon Certificate" },

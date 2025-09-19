@@ -10,6 +10,7 @@ import sql1 from "../../assets/certificates/sql1.jpg"
 import react1 from "../../assets/certificates/react1.jpg"
 import react2 from "../../assets/certificates/react2.jpg"
 import infosys1 from "../../assets/certificates/Infosys SQL1.jpg"
+import react3 from "../../assets/certificates/react3.jpg"
 
 export const Certification = () => {
   const [modalImg, setModalImg] = useState(null);
@@ -109,24 +110,25 @@ export const Certification = () => {
           Certificates
         </h1>
         <p className="text-lg mt-2 text-cyan-100">
-          Udemy, NATS, and more—your learning journey on display 🎓
+          Udemy, NATS, Infosys and more—your learning journey on display 🎓
         </p>
       </header>
 
       <section className="flex flex-wrap justify-center gap-10 px-6 mt-10 pb-24">
         {[
-          { src: infosys1, label: "Infosys SQL Developer Certification" },
-          { src: react1, label: "Udemy React Certification" },
-          { src: react2, label: "Udemy React Certification" },
-          { src: sql1, label: "Udemy SQL Certification" },
-          { src: java2, label: "Udemy Core Java Certification" },
-          { src: git, label: "Udemy Mastering Git Certification" },
-          { src: face, label: "Udemy Face Recognition Certification" },
-          { src: java1, label: "Udemy Java Certification" },
-          { src: react, label: "Udemy React Certification" },
-          { src: tata, label: "NATS TATA MOTORS Certification" },
-          { src: lor, label: "LOR from SARVAGYA DOERS FOUNDATION" },
-        ].map(({ src, label }, idx) => (
+          { src: react3, label: "Udemy React Certification", des: "Sara Acadmy" },
+          { src: infosys1, label: "Infosys SQL Developer Certification", des: "Infosys | SpringBoard" },
+          { src: react1, label: "Udemy React Certification", des: "Meta Brains" },
+          { src: react2, label: "Udemy React Certification", des: "Pierre Henry" },
+          { src: sql1, label: "Udemy SQL Certification", des: "Ganesh Kadam" },
+          { src: java2, label: "Udemy Core Java Certification", des: "Toppers Bootcamp" },
+          { src: git, label: "Udemy Mastering Git Certification", des: "Vitalii Shumylo" },
+          { src: face, label: "Udemy Face Recognition Certification", des: "Arunnachalam Shanmugaraajan" },
+          { src: java1, label: "Udemy Java Certification", des: "Crunch Coding" },
+          { src: react, label: "Udemy React Certification", des: "Learnify IT" },
+          { src: tata, label: "NATS TATA MOTORS Certification", des: "Tata Motors" },
+          { src: lor, label: "LOR from SARVAGYA DOERS FOUNDATION", des: "Sarvagya Doers Foundation" },
+        ].map(({ src, label, des }, idx) => (
           <div
             key={idx}
             className="bg-white/10 backdrop-blur-lg border border-white/30 rounded-xl shadow-xl p-4 max-w-sm"
@@ -138,6 +140,7 @@ export const Certification = () => {
               onClick={() => handleOpenModal({ src, label })}
             />
             <p className="mt-3 text-center font-semibold text-lg">{label}</p>
+            <p className="text-center">{`( ${des} )`}</p>
           </div>
         ))}
       </section>

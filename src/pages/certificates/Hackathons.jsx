@@ -8,6 +8,7 @@ import HPCL from "../../assets/hackathons/HPCL.jpg";
 import SDF from "../../assets/hackathons/SDF.png";
 import CFB from "../../assets/hackathons/CFB.png";
 import Nestle2 from "../../assets/hackathons/Nestle2.jpg";
+import infosys1 from "../../assets/hackathons/Infosys-GlobalHackathon.jpg"
 
 export const Hackathons = () => {
   const [modalImg, setModalImg] = useState(null);
@@ -113,7 +114,8 @@ export const Hackathons = () => {
 
       <section className="flex flex-wrap justify-center gap-10 px-6 mt-10 pb-28">
         {[
-          { src: Nestle2, label: "Nestle Resilience E-learning Certificate" },
+          { src: infosys1, label: "CERTIFICATE OF PARTICIPATION Infosys Global Hackathon 2025" },
+          { src: Nestle2, label: "Nestle Resilience E-learning Completion Certificate" },
           { src: CFB, label: "Code For Bharat Certificate" },
           { src: Eurogrip, label: "Eurogrip Hackathon Certificate" },
           { src: isro, label: "ISRO Workshop Certificate" },

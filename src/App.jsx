@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import { Links } from "./pages/Links";
+import { Projects } from "./pages/Projects";
 import { Internships } from "./pages/certificates/Internships";
 import { Certification } from "./pages/certificates/Certification";
 import { Hackathons } from "./pages/certificates/Hackathons";
@@ -38,6 +39,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Links />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/resume" element={<OnlineResume />} />
         <Route path="/Internships" element={<Internships />} />
         <Route path="/Certification" element={<Certification />} />

@@ -16,23 +16,29 @@ export const Links = () => {
             name: "LinkedIn",
             href: "https://www.linkedin.com/in/sanskar-kishan-bb5910220/",
           },
-          { name: "Projects", href: "https://github.com/sanskarkishan" },
-          // {
-          //   name: "Resume",
-          //   href: "https://drive.google.com/drive/u/0/folders/10aQhlimCCvtC3CfOxRdeiOUqD9nLzwRG",
-          // },
-        ].map(({ name, href }) => (
+        ].map(({ name, href, isInternal, path }) => (
           <li
             key={name}
             className="backdrop-blur-sm bg-white/10 border-white/30 border-2 rounded-xl p-4 text-white hover:bg-white/20 hover:scale-110 transition-all cursor-pointer shadow-lg"
+            onClick={isInternal ? () => navigate(href) : undefined}
           >
-            <a target="_blank" href={href} rel="noopener noreferrer">
-              {name}
-            </a>
+            {isInternal ? (
+              <span>{name}</span>
+            ) : (
+              <a
+                target="_blank"
+                href={href}
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {name}
+              </a>
+            )}
           </li>
         ))}
 
         {[
+          { name: "Projects", path: "/projects" },
           { name: "Resume", path: "/resume" },
           { name: "Internships", path: "/Internships" },
           { name: "Certification", path: "/Certification" },

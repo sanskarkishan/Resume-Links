@@ -14,6 +14,7 @@ import passwordGeneratorImg from "../assets/Projects/Password Generator.png";
 import foodOrderingWebsiteImg from "../assets/Projects/Food Ordering Website.png";
 import netflixCloneImg from "../assets/Projects/Netflix Clone.png";
 import artworkDatabaseWebsiteImg from "../assets/Projects/Artwork Database Website.png";
+import smartIssueTrackerImg from "../assets/Projects/Smart Issue Tracker.png";
 
 
 export const Projects = () => {
@@ -34,7 +35,7 @@ export const Projects = () => {
         description:
           "A full‑stack employee directory with CRUD, search and sorting, built on Spring Boot APIs and a responsive React + Tailwind UI for a smooth admin workflow.",
         link: "https://emp-database-system.netlify.app/",
-        tags: ["Spring Boot", "React", "REST APIs", "Tailwind CSS", "Axios"],
+        tags: ["Spring Boot", "React", "REST APIs", "MySQL", "Tailwind CSS", "Axios"],
         img: employeeManagementImg,
       },
       {
@@ -45,6 +46,24 @@ export const Projects = () => {
         link: "https://lithit.netlify.app/",
         tags: ["React.js", "HTML", "CSS", "JavaScript"],
         img: onlineDatingImg,
+      },
+      {
+        title: "Artwork database website",
+        tagline: "Discover art, beautifully indexed",
+        description:
+          "Browse and search artworks via a public API with clean cards, fast filters, and a gallery‑first experience.",
+        link: "https://grow-me-organic-sanskar.netlify.app/",
+        tags: ["React", "Next.js","API", "Tailwind", "SPA", "HTML", "CSS", "JavaScript"],
+        img: artworkDatabaseWebsiteImg,
+      },
+      {
+        title: "Smart Issue Tracker",
+        tagline: "Track. Prioritize. Resolve.",
+        description:
+          "A sleek issue tracking app with Kanban boards, drag‑and‑drop task management, and real‑time updates using React and Firebase.",
+        link: "https://smart-issue-tracker.netlify.app/",
+        tags: ["React", "Next.js","API", "Node.js", "MySQL", "Tailwind", "SPA", "HTML", "CSS", "JavaScript"],
+        img: smartIssueTrackerImg,
       },
       {
         title: "Joke Generator Web Application",
@@ -145,15 +164,7 @@ export const Projects = () => {
         tags: ["React", "Tailwind", "SPA", "HTML", "CSS", "JavaScript"],
         img: netflixCloneImg,
       },
-      {
-        title: "Artwork database website",
-        tagline: "Discover art, beautifully indexed",
-        description:
-          "Browse and search artworks via a public API with clean cards, fast filters, and a gallery‑first experience.",
-        link: "https://grow-me-organic-sanskar.netlify.app/",
-        tags: ["React", "Next.js","API", "Tailwind", "SPA", "HTML", "CSS", "JavaScript"],
-        img: artworkDatabaseWebsiteImg,
-      },
+      
     ],
     []
   );
